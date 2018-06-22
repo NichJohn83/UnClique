@@ -9,10 +9,15 @@ Welcome
         <div class="container">
             <h1> Late Registration....a Classic</h1>
             <br>
-            <p>
-                This does nothing...yet
-            </p>
+            <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign up</button>
+          </form>
         </div>
     </div>
 
 {% endblock %}
+
+
+

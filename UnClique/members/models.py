@@ -27,8 +27,9 @@ class member(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     preferred_name = models.CharField(max_length=30)
-    major = models.CharField(max_length=30)
+    major = models.CharField(max_length=30, null=True)
     classification = models.CharField(
         max_length=10,
         choices=CLASSIFICATION_CHOICES,
         default=FIRST)
+    email = models.EmailField(max_length=254)
