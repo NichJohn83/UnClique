@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def welcome(request):
-    return render(request, 'unclique/welcome.html')
+    if request.user.is_authenticated:
+        return redirect('member_home')
+    else:
+        return render(request, 'unclique/welcome.html')

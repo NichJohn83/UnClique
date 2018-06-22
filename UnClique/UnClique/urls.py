@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
+from members.views import home
 from .views import welcome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', welcome),
+    url(r'^$', welcome, name="landing_page"),
+    url(r'member', include('members.urls')),
 ]
