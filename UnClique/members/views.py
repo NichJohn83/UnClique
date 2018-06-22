@@ -9,3 +9,8 @@ from django.shortcuts import render, redirect
 @login_required
 def home(request):
     return render(request, 'members/home.html')
+
+
+
+def late_registration(request):
+    return render(request, 'members/signup_form.html')

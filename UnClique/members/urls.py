@@ -2,7 +2,7 @@ from django.conf.urls import url
 from django.contrib.auth.views import LoginView, LogoutView
 
 
-from members.views import home
+from members.views import home, late_registration
 
 urlpatterns =[
     url(r'home$', home, name='member_home'),
@@ -12,4 +12,7 @@ urlpatterns =[
     url(r'logout',
         LogoutView.as_view(),
         name='member_logout'),
+    url(r'signup',
+        late_registration,
+        name='member_signup')
 ]
