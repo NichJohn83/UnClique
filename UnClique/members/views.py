@@ -1,8 +1,9 @@
+import simplejson
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-
+import json
 
 # Create your views here.
 from members.forms import SignUpForm
@@ -36,3 +37,15 @@ def late_registration(request):
         form = SignUpForm()
 
     return render(request, 'members/signup_form.html', {'form': form})
+
+
+def graduation(request):
+    pass
+
+
+
+def display_members(request, memberlist):
+    return HttpResponse('hi')
+    # print('this is the list')
+    # print(memberlist)
+    # return HttpResponse(memberlist)

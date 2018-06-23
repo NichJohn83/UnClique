@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 from members.views import home
-from .views import welcome
+from .views import welcome, shuffle
+
+# app_name = 'members'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', welcome, name="landing_page"),
-    url(r'member', include('members.urls')),
+    url(r'member', include(('members.urls', 'members'), namespace='members')),
 ]
