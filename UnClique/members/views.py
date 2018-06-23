@@ -3,8 +3,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-import json
-
+import ast
+from random import shuffle
 # Create your views here.
 from members.forms import SignUpForm
 
@@ -32,7 +32,7 @@ def late_registration(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('member_home')
+            return redirect('members:member_home')
     else:
         form = SignUpForm()
 
@@ -45,7 +45,16 @@ def graduation(request):
 
 
 def display_members(request, memberlist):
-    return HttpResponse('hi')
-    # print('this is the list')
-    # print(memberlist)
-    # return HttpResponse(memberlist)
+    shuffled_list = _shuffle_memebers_(memberlist)
+    return HttpResponse(shuffled_list)
+
+
+def _shuffle_memebers_(list_of_members):
+    list_from_string = ast.literal_eval(list_of_members)
+    print('\n\n\n')
+    print('list from string \n\n')
+    print(list_from_string)
+    print('\nshuffled_list\n\n')
+    shuffle(list_from_string)
+    print(list_from_string)
+    return list_from_string

@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from django.contrib.auth.views import LoginView, LogoutView
-
+from django.urls import path
 
 from members.views import home, late_registration, display_members
 
@@ -15,7 +15,7 @@ urlpatterns =[
     url(r'signup',
         late_registration,
         name='member_signup'),
-    url(r'displaymembers/(?P<memberlist>)',
+    path(r'displaymembers/<memberlist>',
         display_members,
         name='member_display'
         )

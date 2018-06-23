@@ -17,9 +17,8 @@ def shuffle(modeladmin, request, queryset):
     for item in queryset:
         list.append(model_to_dict(item))
 
-    # messages.add_message(request, messages.INFO, memberlist)
-
-    return HttpResponseRedirect(reverse('members:member_display', args=[list]))
+    print(list)
+    return HttpResponseRedirect(reverse('members:member_display', kwargs={'memberlist': list}))
     #, args=memberlist)
     # return redirect('member_display', memberlist)
 
