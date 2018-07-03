@@ -12,40 +12,40 @@ from members.models import Member
 
 
 
-#
-# def shuffle(modeladmin, request, queryset):
-#     list = []
-#     for item in queryset:
-#         list.append(model_to_dict(item))
-#
-#     print(list)
-#     return HttpResponseRedirect(reverse('members:member_display', kwargs={'memberlist': list}))
-#     #, args=memberlist)
-#     # return redirect('member_display', memberlist)
 
-
-def user_shuffle(modeladmin, request, queryset):
+def shuffle(modeladmin, request, queryset):
     list = []
     for item in queryset:
         list.append(model_to_dict(item))
 
     print(list)
     return HttpResponseRedirect(reverse('members:member_display', kwargs={'memberlist': list}))
+    #, args=memberlist)
+    # return redirect('member_display', memberlist)
 
 
-# shuffle.short_description = "UnClique!"
-user_shuffle.short_description = "UnClique!"
+# def user_shuffle(modeladmin, request, queryset):
+#     list = []
+#     for item in queryset:
+#         list.append(model_to_dict(item))
+#
+#     print(type(list))
+#     return HttpResponseRedirect(reverse('members:member_display', kwargs={'memberlist': list}))
 
-# class MemberAdmin(admin.ModelAdmin):
-#     ordering = ['first_name']
-#     actions = [shuffle]
+
+shuffle.short_description = "UnClique!"
+# user_shuffle.short_description = "UnClique!"
+
+class MemberAdmin(admin.ModelAdmin):
+    ordering = ['first_name']
+    actions = [shuffle]
 
 class UserAdmin(admin.ModelAdmin):
     ordering = ['first_name']
-    actions = [user_shuffle]
+    actions = [shuffle]
 
 
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
 
-# admin.site.register(Member, MemberAdmin)
+admin.site.register(Member, MemberAdmin)

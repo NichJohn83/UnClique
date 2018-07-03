@@ -46,15 +46,14 @@ def graduation(request):
 
 def display_members(request, memberlist):
     shuffled_list = _shuffle_memebers_(memberlist)
-    return HttpResponse(shuffled_list)
+
+    return render(request, 'members/unclique_list.html', {'memberlist': shuffled_list})
+    # return HttpResponse(shuffled_list)
 
 
 def _shuffle_memebers_(list_of_members):
     list_from_string = ast.literal_eval(list_of_members)
-    print('\n\n\n')
-    print('list from string \n\n')
-    print(list_from_string)
-    print('\nshuffled_list\n\n')
     shuffle(list_from_string)
-    print(list_from_string)
-    return list_from_string
+    it = iter(list_from_string)
+    new_list = zip(it, it)
+    return new_list

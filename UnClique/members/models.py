@@ -38,6 +38,9 @@ class Member(models.Model):
         default=FIRST)
     email = models.EmailField(max_length=254)
 
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
+
 
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
