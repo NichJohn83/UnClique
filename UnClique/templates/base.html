@@ -61,11 +61,11 @@
 
           {% if user.is_authenticated and not user.member.subscribed  %}
 
-          <li><a href=""> <p class="greentext"> Subscribe to UnClique </p></a> </li>
+          <li><a href="{% url 'members:sub' %}"> <p class="greentext"> Subscribe to UnClique </p></a> </li>
 
           {% elif user.is_authenticated and user.member.subscribed %}
 
-          <li><a href=""> <p class="redtext"> Unsubscribe from UnClique 😰 </p></a> </li>
+          <li><a href="{% url 'members:unsub' %}"> <p class="redtext"> Unsubscribe from UnClique 😰 </p></a> </li>
 
           {% endif %}
 

@@ -1,12 +1,14 @@
 import simplejson
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 import ast
 from random import shuffle
 # Create your views here.
 from members.forms import SignUpForm
+from members.models import Member
 
 
 @login_required
@@ -59,3 +61,14 @@ def _shuffle_memebers_(list_of_members):
     it = iter(list_from_string)
     new_list = zip(it, it)
     return new_list
+
+@login_required
+def subscribe_member(request):
+    Member.objects.filter(id=request.user.member.id).update(subscribed=True)
+    return redirect('members:member_home')
+
+
+@login_required
+def unsubscribe_member(request):
+    Member.objects.filter(id=request.user.member.id).update(subscribed=False)
+    return redirect('members:member_home')

@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ab221f07-54b9-4e9a-b9d6-3b6a6c80e192" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnClique/UnClique/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/UnClique/UnClique/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnClique/members/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/UnClique/members/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnClique/members/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/UnClique/members/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnClique/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/UnClique/members/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnClique/templates/members/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/UnClique/templates/members/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnClique/templates/members/shuffle_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/UnClique/templates/members/shuffle_success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnClique/templates/members/unclique_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/UnClique/templates/members/unclique_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnClique/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/UnClique/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UnClique/members/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="629">
+              <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -44,16 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unclique_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UnClique/templates/members/unclique_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="12" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UnClique/templates/members/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -67,6 +54,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UnClique/UnClique/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="27" column="74" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -92,8 +88,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UnClique/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="636">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
@@ -101,8 +97,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UnClique/members/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="350">
+              <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -113,8 +109,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UnClique/members/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="465">
+              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -161,14 +157,14 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/UnClique/UnClique/views.py" />
         <option value="$PROJECT_DIR$/UnClique/members/admin.py" />
-        <option value="$PROJECT_DIR$/UnClique/members/models.py" />
-        <option value="$PROJECT_DIR$/UnClique/members/urls.py" />
         <option value="$PROJECT_DIR$/UnClique/templates/members/shuffle_success.html" />
         <option value="$PROJECT_DIR$/UnClique/templates/members/unclique_list.html" />
-        <option value="$PROJECT_DIR$/UnClique/members/views.py" />
-        <option value="$PROJECT_DIR$/UnClique/templates/base.html" />
         <option value="$PROJECT_DIR$/UnClique/UnClique/settings.py" />
         <option value="$PROJECT_DIR$/UnClique/templates/members/home.html" />
+        <option value="$PROJECT_DIR$/UnClique/members/models.py" />
+        <option value="$PROJECT_DIR$/UnClique/members/urls.py" />
+        <option value="$PROJECT_DIR$/UnClique/templates/base.html" />
+        <option value="$PROJECT_DIR$/UnClique/members/views.py" />
       </list>
     </option>
   </component>
@@ -577,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UnClique/UnClique/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="74" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UnClique/members/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -635,43 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UnClique/members/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UnClique/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UnClique/members/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UnClique/members/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UnClique/templates/members/login_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -690,6 +642,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnClique/UnClique/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="74" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnClique/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnClique/members/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnClique/members/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnClique/members/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
