@@ -40,7 +40,8 @@ def late_registration(request):
 
 
 def graduation(request):
-    pass
+    # Functionality to actually persist the pairings in the DB go here
+    return render(request, 'members/shuffle_success.html')
 
 
 
