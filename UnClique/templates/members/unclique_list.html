@@ -8,9 +8,17 @@ UnClique List
 
 
 {% block content%}
-    <ul>
-      {% for member in memberlist %}
-        <li>{{ member }}</li>
-      {% endfor %}
-    </ul>
+
+    <table>
+        {% for member in memberlist %}
+            <br>
+            <tr>
+                <td> <b>{{ member.0.first_name }} {{ member.0.last_name}} </b>, {{member.0.major}} -- ({{member.0.classification}})  <br>
+                    <b> {{ member.1.first_name }} {{ member.1.last_name}} </b>, {{member.1.major}} -- ({{member.1.classification}}) <br><br></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+
 {% endblock %}
