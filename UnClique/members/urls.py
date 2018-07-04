@@ -19,7 +19,7 @@ urlpatterns =[
         display_members,
         name='member_display'
         ),
-    url(r'complete',
+    path(r'complete/<memberlist>',
             graduation,
             name='unclique_complete'),
     ]

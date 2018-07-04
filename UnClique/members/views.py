@@ -39,16 +39,17 @@ def late_registration(request):
     return render(request, 'members/signup_form.html', {'form': form})
 
 
-def graduation(request):
+def graduation(request, memberlist):
     # Functionality to actually persist the pairings in the DB go here
-    return render(request, 'members/shuffle_success.html')
+
+    return render(request, 'members/shuffle_success.html', {'completelist': memberlist})
 
 
 
 def display_members(request, memberlist):
     shuffled_list = _shuffle_memebers_(memberlist)
 
-    return render(request, 'members/unclique_list.html', {'memberlist': shuffled_list})
+    return render(request, 'members/unclique_list.html', {'memberlist': list(shuffled_list)})
     # return HttpResponse(shuffled_list)
 
 

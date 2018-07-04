@@ -37,6 +37,7 @@ class Member(models.Model):
         choices=CLASSIFICATION_CHOICES,
         default=FIRST)
     email = models.EmailField(max_length=254)
+    current_match_Email = models.EmailField(max_length=254, null=True)
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name

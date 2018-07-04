@@ -132,6 +132,6 @@ STATICFILES_DIRS =[
     os.path.join(BASE_DIR, "static")
 ]
 
-LOGIN_REDIRECT_URL = "member_home"
+LOGIN_REDIRECT_URL = "members:member_home"
 LOGOUT_REDIRECT_URL = "landing_page"
-LOGIN_URL = "member_login"
+LOGIN_URL = "members:member_login"

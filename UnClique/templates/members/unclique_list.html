@@ -6,12 +6,11 @@ UnClique List
 {% endblock %}
 
 
-table.spacing td, table.spacing th {
-    padding-right: 2em;
-}
+
 
 
 {% block content%}
+
 
 
 
@@ -35,13 +34,17 @@ table.spacing td, table.spacing th {
             </form>
         <b>{{ ' <======> ' }} </b>
             <form
-                    action="{% url 'members:unclique_complete' %}"
+                    action="{% url 'members:unclique_complete' memberlist %}"
                     method="post">
+                <input type="hidden" value=memberlist>
                 <button type="submit" class="btn-primary"> Looks Good to Me! </button>
                 {% csrf_token %}
             </form>
         </tr>
     </table>
+
+
+
 
 
 {% endblock %}
