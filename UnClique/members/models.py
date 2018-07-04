@@ -27,6 +27,7 @@ class Member(models.Model):
         (STAFF, 'Staff'),
     )
 
+    subscribed = models.BooleanField(null=False, default=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)

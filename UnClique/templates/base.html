@@ -5,6 +5,13 @@
 .whitetext {
         color: white;
 }
+.greentext {
+        color: green;
+}
+.redtext {
+        color: red;
+}
+
 </style>
 <html class="no-js" lang="">
     <head>
@@ -50,9 +57,19 @@
 
           <li> <a href="{% url 'members:member_logout' %} "> Logout </a> </li>
 
+          {% endif %}
 
+          {% if user.is_authenticated and not user.member.subscribed  %}
+
+          <li><a href=""> <p class="greentext"> Subscribe to UnClique </p></a> </li>
+
+          {% elif user.is_authenticated and user.member.subscribed %}
+
+          <li><a href=""> <p class="redtext"> Unsubscribe from UnClique 😰 </p></a> </li>
 
           {% endif %}
+
+
       </ul>
 
       </div>
