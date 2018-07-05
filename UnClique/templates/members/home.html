@@ -9,6 +9,30 @@ Home
         <div class="container">
             <h1> Hello {{user.first_name}}!</h1>
             <p>You are now logged in and this is your home page</p>
+            {% if match and not secondary_match%}
+            <h2><p> Your current pair is: <b> {{match.first_name}} {{match.last_name}} </b> </p></h2>
+            <h3><p>Details about <b>{{match.first_name}}</b></p></h3>
+            <ul>
+                <li> <b>Major:</b> {{match.major}}</li>
+                <li> <b>Year:</b> {{match.classification}}</li>
+                <li> <b>Contact:</b> {{match.email}}</li>
+            </ul>
+
+            {% elif secondary_match %}
+            <h2><p> You are in a <b>Group! </b> <br> Your current group is: <b> {{match.first_name}} {{match.last_name}} and {{secondary_match.first_name}} {{secondary_match.last_name}} </b> </p></h2>
+            <h3><p>Details about <b>{{match.first_name}}</b></p></h3>
+            <ul>
+                <li> <b>Major:</b> {{match.major}}</li>
+                <li> <b>Year:</b> {{match.classification}}</li>
+                <li> <b>Contact:</b> {{match.email}}</li>
+            </ul>
+            <h3><p>Details about <b>{{secondary_match.first_name}}</b></p></h3>
+                <ul>
+                    <li> <b>Major:</b> {{secondary_match.major}}</li>
+                    <li> <b>Year:</b> {{secondary_match.classification}}</li>
+                    <li> <b>Contact:</b> {{secondary_match.email}}</li>
+                </ul>
+            {% endif %}
         </div>
 
     </div>

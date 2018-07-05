@@ -14,7 +14,20 @@ Complete!
             <h1> Success! </h1>
             <br>
             <h2>AASU Members have now received new pairings!</h2>
-            {{completelist}}
+                <table>
+        {% for member in completelist %}
+            <br>
+            <tr>
+                <td> <b>{{ member.0.first_name }} {{ member.0.last_name}} </b> <br>
+                     <b> {{ member.1.first_name }} {{ member.1.last_name}} </b><br>
+                    {% if member.2 %}
+                    <b> {{ member.2.first_name }} {{ member.2.last_name}} </b>
+                    {% endif %}
+                    <br>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
         </div>
     </div>
 

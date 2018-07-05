@@ -4,6 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 
+
 # Create your models here.
 
 
@@ -38,7 +39,8 @@ class Member(models.Model):
         choices=CLASSIFICATION_CHOICES,
         default=FIRST)
     email = models.EmailField(max_length=254)
-    current_match_Email = models.EmailField(max_length=254, null=True)
+    current_match_email = models.EmailField(max_length=254, null=True)
+    secondary_match_email = models.EmailField(max_length=254, null=True)
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name

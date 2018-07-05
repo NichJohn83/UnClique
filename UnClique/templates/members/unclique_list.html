@@ -19,7 +19,13 @@ UnClique List
             <br>
             <tr>
                 <td> <b>{{ member.0.first_name }} {{ member.0.last_name}} </b>, {{member.0.major}} -- ({{member.0.classification}})   <br>
-                     <b> {{ member.1.first_name }} {{ member.1.last_name}} </b>, {{member.1.major}} -- ({{member.1.classification}})   <br><br>
+                     <b> {{ member.1.first_name }} {{ member.1.last_name}} </b>, {{member.1.major}} -- ({{member.1.classification}})  <br>
+                    {% if member.2 %}
+                    <b> {{ member.2.first_name }} {{ member.2.last_name}} </b>, {{member.2.major}} -- ({{member.2.classification}})  <br>
+
+                    {% endif %}
+
+                    <br>
                 </td>
             </tr>
         {% endfor %}

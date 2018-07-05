@@ -15,7 +15,8 @@ from members.models import Member
 
 def shuffle(modeladmin, request, queryset):
     list = []
-    for item in queryset:
+    newset = queryset.filter(subscribed=True)
+    for item in newset:
         list.append(model_to_dict(item))
 
     print(list)
