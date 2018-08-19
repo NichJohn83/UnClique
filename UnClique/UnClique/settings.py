@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'byg91@0d)l92+yep7_=9rm_m%$qegr8n@-&**s*u2mcd#-zs0n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 '''
@@ -141,13 +141,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-
+STATIC_ROOT = ''
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/ec2-user/UnClique/UnClique/assets/'
+STATICFILES_DIRS = ( os.path.join('static'), )
 
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR, "static")
-]
+
+#STATIC_URL = '/static/'
+
+#STATIC_ROOT = '/home/ec2-user/UnClique/UnClique/static'
+
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+
 
 LOGIN_REDIRECT_URL = "members:member_home"
 LOGOUT_REDIRECT_URL = "landing_page"
