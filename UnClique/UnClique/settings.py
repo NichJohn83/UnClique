@@ -23,11 +23,27 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'byg91@0d)l92+yep7_=9rm_m%$qegr8n@-&**s*u2mcd#-zs0n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+'''
+ALLOWED_HOSTS = ['54.172.211.18', '172.31.38.120', 'unclique.io']
 
+import requests
 
+########## ALLOWED_HOSTS
+from requests.exceptions import ConnectionError
+
+url = "http://169.254.169.254/latest/meta-data/public-ipv4"
+try:
+    r = requests.get(url)
+    instance_ip = r.text
+    ALLOWED_HOSTS += [instance_ip]
+except ConnectionError:
+    error_msg = "You can only run production settings on an AWS EC2 instance"
+    raise ImproperlyConfigured(error_msg)
+########## END ALLOWED_HOSTS
+'''
 # Application definition
 
 INSTALLED_APPS = [
@@ -56,7 +72,7 @@ ROOT_URLCONF = 'UnClique.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR), "templates"],
+        'DIRS': ['/home/ec2-user/UnClique/UnClique/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,7 +95,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'unclique',
-        'USER': 'root',
+        'USER': 'admin',
         ###################################
         'PASSWORD': 'mypass',
         ###################################
@@ -125,8 +141,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
 
+STATIC_URL = '/static/'
+STATIC_ROOT = '/home/ec2-user/UnClique/UnClique/assets/'
 
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR, "static")
